@@ -171,7 +171,7 @@ public class App {
     private static String[] splitCityProvince(String input) {
         String[] parts = input.split("[|,]", 2);
         if (parts.length == 0) {
-            return new String[]{input};
+            return new String[] { input };
         }
 
         parts[0] = parts[0].trim();
@@ -313,9 +313,9 @@ public class App {
             options.transportType = transport;
         }
 
-        options.packagesPerLocker = promptInt(
-                "Default packages per locker [default " + options.packagesPerLocker + "]: ",
-                options.packagesPerLocker);
+        // options.packagesPerLocker = promptInt(
+        // "Default packages per locker [default " + options.packagesPerLocker + "]: ",
+        // options.packagesPerLocker);
         options.minutesPerPackage = promptDouble(
                 "Minutes per package [default " + formatNumber(options.minutesPerPackage) + "]: ",
                 options.minutesPerPackage);
